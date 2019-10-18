@@ -351,3 +351,8 @@ button:disabled:hover {
 .heading{
     margin: auto;
 }
+
+.header{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
