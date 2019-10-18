@@ -25,6 +25,7 @@ import { faUserCheck } from '@fortawesome/free-solid-svg-icons'
 import { faJava } from '@fortawesome/free-brands-svg-icons'
 import { faCheckSquare } from '@fortawesome/free-solid-svg-icons'
 import { faSquare } from '@fortawesome/free-solid-svg-icons'
+import { faProjectDiagram } from '@fortawesome/free-solid-svg-icons'
 library.add(faSquare)
 library.add(faCheckSquare)
 library.add(faJava)
@@ -38,6 +39,7 @@ library.add(faTimes)
 library.add(faEllipsisV)
 library.add(faSearch)
 library.add(faStar)
+library.add(faProjectDiagram)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

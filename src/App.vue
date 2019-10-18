@@ -2,7 +2,7 @@
   <div class="body">
     <div class="container-fluid">
       <div class="d-flex row title-bar">
-        <font-awesome-icon icon="java" />{{ title }}
+        {{ title }}
       </div>
     </div>
 
@@ -29,15 +29,25 @@
             <a
               href="#"
               class="list-group-item list-group-item-action"
+              v-bind:class="{'selected': (menu == 'Graph')}"
+              v-on:click="this.graph"
+            >
+              <font-awesome-icon icon="project-diagram" />
+            </a>
+            <a
+              href="#"
+              class="list-group-item list-group-item-action"
               v-bind:class="{'selected': (menu == 'Compatibility')}"
               v-on:click="this.compatibility"
             >
               <font-awesome-icon icon="balance-scale" />
             </a>
+
           </div>
         </div>
         <UserView v-if="(menu == 'Search') && (loading != true)" />
         <FavoritesView v-if="(menu == 'Favorites') && (loading != true)" />
+        <GraphView v-if="(menu == 'Graph') && (loading != true)"/> 
         <CompatibilityView v-if="(menu == 'Compatibility') && (loading != true)"/>        
         <LoadingView v-if="(loading == true)"/>
       </div>
@@ -51,6 +61,7 @@ import FavoritesView from "./components/FavoritesView.vue";
 import UserView from "./components/UserView.vue";
 import CompatibilityView from "./components/CompatibilityView.vue";
 import LoadingView from "./components/LoadingView.vue";
+import GraphView from "./components/GraphView.vue";
 
 export default {
   name: "app",
@@ -72,13 +83,17 @@ export default {
     },
     compatibility() {
       this.$store.commit("setMenu", "Compatibility");
+    },
+    graph() {
+      this.$store.commit("setMenu", "Graph");
     }
   },
   components: {
     FavoritesView,
     UserView,
     CompatibilityView,
-    LoadingView
+    LoadingView,
+    GraphView
   }
 };
 </script>
