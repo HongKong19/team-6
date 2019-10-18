@@ -2,7 +2,7 @@
   <div class="body">
     <div class="container-fluid">
       <div class="d-flex row title-bar">
-        <h3>Premiere Performances</h3>
+        {{ title }}
       </div>
     </div>
 
@@ -29,6 +29,14 @@
             <a
               href="#"
               class="list-group-item list-group-item-action"
+              v-bind:class="{'selected': (menu == 'Graph')}"
+              v-on:click="this.graph"
+            >
+              <font-awesome-icon icon="project-diagram" />
+            </a>
+            <a
+              href="#"
+              class="list-group-item list-group-item-action"
               v-bind:class="{'selected': (menu == 'Compatibility')}"
               v-on:click="this.compatibility"
             >
@@ -42,12 +50,14 @@
             >
               <font-awesome-icon icon="balance-scale" />
             </a>
+
           </div>
         </div>
         <UserView v-if="(menu == 'Search') && (loading != true)" />
         <FavoritesView v-if="(menu == 'Favorites') && (loading != true)" />
         <CompatibilityView v-if="(menu == 'Compatibility') && (loading != true)"/>   
         <EngagementView v-if="(menu == 'Engagement') && (loading != true)"/>      
+        <GraphView v-if="(menu == 'Graph') && (loading != true)"/>        
         <LoadingView v-if="(loading == true)"/>
       </div>
     </div>
@@ -61,6 +71,7 @@ import UserView from "./components/UserView.vue";
 import CompatibilityView from "./components/CompatibilityView.vue";
 import EngagementView from "./components/EngagementView.vue"
 import LoadingView from "./components/LoadingView.vue";
+import GraphView from "./components/GraphView.vue";
 
 export default {
   name: "app",
@@ -86,13 +97,17 @@ export default {
     engagement() {
       this.$store.commit("setMenu", "Engagement");
     },
+    graph() {
+      this.$store.commit("setMenu", "Graph");
+    }
   },
   components: {
     FavoritesView,
     UserView,
     CompatibilityView,
     LoadingView,
-    EngagementView
+    EngagementView,
+    GraphView
   }
 };
 </script>
