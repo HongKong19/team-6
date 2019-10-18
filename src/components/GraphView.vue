@@ -1,8 +1,9 @@
 <template>
   <v-container>
-      <div class="graph-page" style="background: none">
-        <d3-network :net-nodes="nodes" :net-links="links" :options="options">
-        </d3-network>
+      <div class="graph-page">
+        <d3-network :net-nodes="nodes" :net-links="links" :options="options"></d3-network>
+      </div>
+      <div class="filter-box">
       </div>
   </v-container>
 </template>
@@ -13,9 +14,9 @@ export default {
   data () {
     return {
       nodes: [
-        { id: 1, name: 'my node 1' },
-        { id: 2, name: 'my node 2' },
-        { id: 3, _color:'orange' },
+        { id: 1, name: 'Name1' },
+        { id: 2, name: 'Name2' },
+        { id: 3, _color: 'orange'},
         { id: 4 },
         { id: 5 },
         { id: 6 },
@@ -26,13 +27,18 @@ export default {
       links: [
         { sid: 1, tid: 2, _color:'red' },
         { sid: 2, tid: 8, _color:'f0f' },
-        { sid: 3, tid: 4,_color:'rebeccapurple' },
+        { sid: 3, tid: 4, _color:'rebeccapurple' },
         { sid: 4, tid: 5 },
         { sid: 5, tid: 6 },
         { sid: 7, tid: 8 },
         { sid: 5, tid: 8 },
         { sid: 3, tid: 8 },
-        { sid: 7, tid: 9 }
+        { sid: 7, tid: 9 },
+        { sid: 9, tid: 5 },
+        { sid: 6, tid: 4 },
+
+        
+
       ],
       options:
       {
