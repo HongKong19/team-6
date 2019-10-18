@@ -2,7 +2,7 @@
   <div class="body">
     <div class="container-fluid">
       <div class="d-flex row title-bar">
-        <font-awesome-icon icon="java" />{{ title }}
+        <h3>Premiere Performances</h3>
       </div>
     </div>
 
@@ -34,11 +34,20 @@
             >
               <font-awesome-icon icon="balance-scale" />
             </a>
+            <a
+              href="#"
+              class="list-group-item list-group-item-action"
+              v-bind:class="{'selected': (menu == 'Engagement')}"
+              v-on:click="this.engagement"
+            >
+              <font-awesome-icon icon="balance-scale" />
+            </a>
           </div>
         </div>
         <UserView v-if="(menu == 'Search') && (loading != true)" />
         <FavoritesView v-if="(menu == 'Favorites') && (loading != true)" />
-        <CompatibilityView v-if="(menu == 'Compatibility') && (loading != true)"/>        
+        <CompatibilityView v-if="(menu == 'Compatibility') && (loading != true)"/>   
+        <EngagementView v-if="(menu == 'Engagement') && (loading != true)"/>      
         <LoadingView v-if="(loading == true)"/>
       </div>
     </div>
@@ -50,6 +59,7 @@ import { mapState } from "vuex";
 import FavoritesView from "./components/FavoritesView.vue";
 import UserView from "./components/UserView.vue";
 import CompatibilityView from "./components/CompatibilityView.vue";
+import EngagementView from "./components/EngagementView.vue"
 import LoadingView from "./components/LoadingView.vue";
 
 export default {
@@ -72,13 +82,17 @@ export default {
     },
     compatibility() {
       this.$store.commit("setMenu", "Compatibility");
-    }
+    },
+    engagement() {
+      this.$store.commit("setMenu", "Engagement");
+    },
   },
   components: {
     FavoritesView,
     UserView,
     CompatibilityView,
-    LoadingView
+    LoadingView,
+    EngagementView
   }
 };
 </script>
