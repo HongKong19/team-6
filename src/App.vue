@@ -2,7 +2,7 @@
   <div class="body">
     <div class="container-fluid">
       <div class="d-flex row title-bar">
-        {{ title }}
+        <h3>{{ title }}</h3>
       </div>
     </div>
 
@@ -48,7 +48,7 @@
               v-bind:class="{'selected': (menu == 'Engagement')}"
               v-on:click="this.engagement"
             >
-              <font-awesome-icon icon="balance-scale" />
+              <font-awesome-icon icon="dollar-sign" />
             </a>
 
           </div>

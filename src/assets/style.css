@@ -1,5 +1,5 @@
 body {
-    height: 100vh
+    height: 100vh;
 }
 
 p {
@@ -40,7 +40,7 @@ div, a, button {
 }
 
 .main-sidebar {
-    background-color: #efefef;
+    background-color: #5db8c6;
 }
 
 .main-sidebar .list-group-item {
@@ -276,6 +276,48 @@ button:disabled:hover {
     border-right: 1px solid #efefef;
 }
 
+.engagement-box{
+    width: 80%;
+    border: 1px solid black;
+    margin: 40px auto ;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 0;
+}
+
+.engagement-person{
+    display: flex;
+    position: relative;
+}
+
+.engagement-person button{
+    position: absolute;
+    right: 20px;
+    color: #5db8c6 !important;
+    text-transform: uppercase;
+    background: #ffffff;
+    padding: 3px 10px;
+    border: 2px solid #5db8c6 !important;
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+}
+
+.engagement-person button:hover {
+    color: #494949 !important;
+    border-radius: 50px;
+    border-color: #494949 !important;
+    transition: all 0.3s ease 0s;
+}
+
+.engagement-box hr{
+    margin: 0;
+    width:98%;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
 .graph-page {
     align-items: center;
     justify-content: center;
@@ -296,3 +338,12 @@ button:disabled:hover {
     width: 200px;
 }
 
+.boxing{
+    display: flex;
+    position: relative;
+}
+
+.box-img{
+    position: absolute;
+    right: 10px;
+}
