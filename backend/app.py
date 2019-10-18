@@ -68,7 +68,11 @@ def compare():
     user2_vec = np.array(user2_vec)
 
     cos_sim = int((dot(user1_vec, user2_vec) / (norm(user1_vec) * norm(user2_vec)))*100)
-    return str(cos_sim)
+    return json.dumps({
+        'userA': user1,
+        'userB': user2,
+        'similarity': cos_sim
+    })
 
 
 

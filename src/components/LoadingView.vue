@@ -16,7 +16,7 @@ export default {
   name: "CompatibilityView",
   data() {
     return {
-      loadingMessage: "Processing Repository Data"
+      loadingMessage: "Looking for user.."
     };
   },
 
