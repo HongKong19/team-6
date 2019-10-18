@@ -8,13 +8,32 @@ from flask_cors import CORS
 app = Flask(__name__)
 cors = CORS(app)
 
-g = Github(GITHUB_API_KEY)
+import json
+
+with open('./final_user_data_team_6.json') as json_file:
+    data = json.load(json_file)
 
 
-@app.route('/')
+emailList = []
+
+for user, value in data.items():
+    if((int(value['RevenueAsClient'])/int(value['RevenueAsDonor'])>4)):
+        emailList.append({user:value['Email']})
+
+@app.route('/getUser')
 def index():
     user = request.args.get('user')
-    return json.dumps(get(user))
+    try:
+        return json.dumps(data[user])
+    except:
+        return('ERROR: INVALID')
+
+@app.route('/getEmailList')
+def returnList():
+    return json.dumps(emailList)
+
+print(emailList)
+
 
 
 @lru_cache(maxsize=100)
