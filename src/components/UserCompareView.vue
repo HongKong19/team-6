@@ -38,7 +38,7 @@ export default {
     return {
       error: "",
       query: "",
-      searchTitle: "Search Github Users"
+      searchTitle: "Search for Donors and Users"
     };
   },
   methods: {

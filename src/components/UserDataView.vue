@@ -7,14 +7,14 @@
           <h1>Overall Revenue</h1>
           <radial-progress-bar
             :diameter="200"
-            :completed-steps="viewingUser.score"
+            :completed-steps="viewingUser.Score"
             :total-steps="100"
             start-color="#4eaba8"
             stop-color="#489290"
             inner-stroke-color="#efefef"
             stroke-width="20"
           >
-            <h1>{{viewingUser.score}}</h1>
+            <h1>{{viewingUser.Score}}</h1>
           </radial-progress-bar>
         </div>
 
@@ -29,7 +29,7 @@
             <div class="col-md-3">
               <radial-progress-bar
                 :diameter="65"
-                :completed-steps="score"
+                :completed-steps="viewingUser.RevenueAsDonor"
                 :total-steps="50000"
                 start-color="#4eaba8"
                 stop-color="#489290"
@@ -48,7 +48,7 @@
             <div class="col-md-3">
               <radial-progress-bar
                 :diameter="65"
-                :completed-steps="score"
+                :completed-steps="viewingUser.RevenueAsClient"
                 :total-steps="100000"
                 start-color="#4eaba8"
                 stop-color="#489290"
