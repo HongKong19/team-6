@@ -1,8 +1,8 @@
 <template>
   <div class="body">
     <div class="container-fluid">
-      <div class="d-flex row title-bar">
-        <h3>{{ title }}</h3>
+      <div class="d-flex row title-bar header">
+        <h3 class="heading">{{ title }}</h3>
       </div>
     </div>
 
@@ -48,7 +48,7 @@
               v-bind:class="{'selected': (menu == 'Engagement')}"
               v-on:click="this.engagement"
             >
-              <font-awesome-icon icon="dollar-sign" />
+              <h4><font-awesome-icon icon="dollar-sign" /> </h4>
             </a>
 
           </div>
