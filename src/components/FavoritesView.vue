@@ -11,7 +11,7 @@
         </div>
         <div>
           <button class="btn btn-main box-img" v-on:click="viewUser(user)">
-            <font-awesome-icon icon="newspaper" /> Email
+            View Profile
           </button>
         </div>
       </div>

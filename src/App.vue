@@ -2,7 +2,7 @@
   <div class="body">
     <div class="container-fluid">
       <div class="d-flex row title-bar">
-        {{ title }}
+        <h3>{{ title }}</h3>
       </div>
     </div>
 
