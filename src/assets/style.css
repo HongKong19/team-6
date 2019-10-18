@@ -317,3 +317,11 @@ button:disabled:hover {
     margin-top: 12px;
     margin-bottom: 12px;
 }
+
+.graph-page {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
