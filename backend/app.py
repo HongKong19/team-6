@@ -13,10 +13,15 @@ cors = CORS(app)
 
 import json
 
-with open('./user_base.json') as json_file:
+with open('./final_user_data_team_6.json') as json_file:
     data = json.load(json_file)
 
 
+emailList = []
+
+for user, value in data.items():
+    if((int(value['RevenueAsClient'])/int(value['RevenueAsDonor'])>4)):
+        emailList.append({user:value['Email']})
 
 @app.route('/getUser')
 def index():
@@ -26,6 +31,13 @@ def index():
         return json.dumps(data[user])
     except:
         return('ERROR: INVALID')
+
+@app.route('/getEmailList')
+def returnList():
+    return json.dumps(emailList)
+
+print(emailList)
+
 
 @app.route('/CompareUser')
 def compare():

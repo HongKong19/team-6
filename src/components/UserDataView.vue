@@ -4,69 +4,76 @@
     <div class="score-card score-card-main">
       <div class="row">
         <div class="col-md-6">
-          <h1>Overall Score</h1>
+          <h1>Overall Revenue</h1>
           <radial-progress-bar
             :diameter="200"
-            :completed-steps="viewingUser.overall_score"
+            :completed-steps="viewingUser.score"
             :total-steps="100"
             start-color="#4eaba8"
             stop-color="#489290"
             inner-stroke-color="#efefef"
             stroke-width="20"
           >
-            <h1>{{viewingUser.overall_score}}</h1>
+            <h1>{{viewingUser.score}}</h1>
           </radial-progress-bar>
         </div>
+
         <div
           class="col-md-6 align-self-center justify-self-center"
           style="border-left: 1px solid #efefef; padding-left: 30px; "
         >
-          <div class="row" v-for="(score, type) in viewingUser.scores" v-bind:key="type">
+          <div class="row">
             <div class="col-md-9 score-name">
-              <h5>{{ type }}</h5>
+              <h5>Revenue as Donor</h5>
             </div>
             <div class="col-md-3">
               <radial-progress-bar
                 :diameter="65"
                 :completed-steps="score"
-                :total-steps="100"
+                :total-steps="50000"
                 start-color="#4eaba8"
                 stop-color="#489290"
                 inner-stroke-color="#efefef"
                 stroke-width="5"
               >
-                <h6>{{score}}</h6>
+                <h6>{{viewingUser.RevenueAsDonor}}</h6>
               </radial-progress-bar>
             </div>
           </div>
+
+        <div class="row">
+            <div class="col-md-9 score-name">
+              <h5>Revenue as Client</h5>
+            </div>
+            <div class="col-md-3">
+              <radial-progress-bar
+                :diameter="65"
+                :completed-steps="score"
+                :total-steps="100000"
+                start-color="#4eaba8"
+                stop-color="#489290"
+                inner-stroke-color="#efefef"
+                stroke-width="5"
+              >
+                <h6>{{viewingUser.RevenueAsClient}}</h6>
+              </radial-progress-bar>
+            </div>
+          </div>
+ 
+
         </div>
       </div>
     </div>
 
     <div class="score-card score-card-main">
-      <h3>Java Repository Stats</h3>
+      <h3>Concerts Attended</h3>
       <hr />
-      <table class="table table-borderless" style="border-top:none; text-align: center">
-        <thead style="border-top:none">
-          <tr style="border-top:none">
-            <th scope="col" class="br" style="border-top:none">Number of Repositories:</th>
-            <th scope="col" class="br" style="border-top:none">Average Stars per Repository:</th>
-            <th scope="col" class="br" style="border-top:none">Issue Closure Ratio:</th>
-            <th scope="col" style="border-top:none">Average Fork Count:</th>
-          </tr>
-        </thead>
-        <tbody style="border-top:none">
-          <tr>
-            <td class="br">{{viewingUser.num_of_java_repos}}</td>
-            <td class="br">{{viewingUser.avg_stars_count_per_repo}}</td>
-            <td class="br">{{viewingUser.closed_issue_ratio.toFixed(2)}}</td>
-            <td>{{viewingUser.avg_fork_count}}</td>
-          </tr>
-        </tbody>
-      </table>
+      <ul v-for="(concert) in viewingUser.ConcertsAttended" v-bind:key="concert">
+        <li>{{ concert }}</li>
+      </ul>
     </div>
 
-    <div class="row justify-content-center">
+    <!-- <div class="row justify-content-center">
       <div class="score-card">
         <h3>Productivity</h3>
         <hr />
@@ -181,7 +188,8 @@
         </div>
       </div>
     </div>
-  </div>
+  -->
+  </div> 
 </template>
 
 

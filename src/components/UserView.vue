@@ -33,7 +33,7 @@
         <div class="clear-search" v-on:click="clearUser">
           <font-awesome-icon icon="times" />
         </div>
-        <h4>{{viewingUser.username}}</h4>
+        <h4>{{viewingUser.Name}}</h4>
         <hr>
         <h6 v-if="viewingUser.Email != null">Email: {{viewingUser.Email}}</h6>
         <h6 v-if="viewingUser.Age != null">Age: {{viewingUser.Age}}</h6>

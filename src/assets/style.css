@@ -347,3 +347,7 @@ button:disabled:hover {
     position: absolute;
     right: 10px;
 }
+
+.heading{
+    margin: auto;
+}
