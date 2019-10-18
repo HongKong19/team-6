@@ -33,21 +33,17 @@
         <div class="clear-search" v-on:click="clearUser">
           <font-awesome-icon icon="times" />
         </div>
-        <img :src="viewingUser.avatar" />
         <h4>{{viewingUser.username}}</h4>
         <hr>
-        <h6 v-if="viewingUser.name != null">{{viewingUser.name}}</h6>
-        <h6 v-if="viewingUser.company != null">{{viewingUser.company}}</h6>
-        <h6 v-if="viewingUser.location != null">{{viewingUser.location}}</h6>
-        <p v-if="viewingUser.bio != null" style="padding: 20px 0;">{{viewingUser.bio}}</p>
+        <h6 v-if="viewingUser.Email != null">Email: {{viewingUser.Email}}</h6>
+        <h6 v-if="viewingUser.Age != null">Age: {{viewingUser.Age}}</h6>
+        <h6 v-if="viewingUser.Address != null">Address: {{viewingUser.Address}}</h6>
+        <br>
+        <h6 v-if="viewingUser.DateRegistered != null">Date Registered: {{viewingUser.DateRegistered}}</h6>
+
         <hr>
-        <button class="btn btn-sec" v-if="viewingUser.email != null">
-          <font-awesome-icon icon="envelope" />Contact
-        </button>
-        <button v-if="isAdded(viewingUser.username)" style="margin-top: 15px;" class="btn btn-main" disabled>
-          <font-awesome-icon icon="user-check" />Saved
-        </button> 
-        <button v-else @click="addToFavorites(viewingUser)" style="margin-top: 15px;" class="btn btn-main">
+
+        <button  @click="addToFavorites(viewingUser)" style="margin-top: 15px;" class="btn btn-main">
           <font-awesome-icon icon="user-plus" />Save
         </button>
       </div>
