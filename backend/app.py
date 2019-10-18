@@ -50,6 +50,7 @@ def compare():
     user2_data = data[user2]
     user1_vec = []
     user2_vec = []
+    # concert_list = get_concert_list()
     for concert in get_concert_list():
         if concert in user1_data["ConcertsAttended"]:
             user1_vec.append(1)

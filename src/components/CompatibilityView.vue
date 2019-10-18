@@ -57,7 +57,7 @@
     <template v-else>
       <div class="col-md-2 profile-sidebar" style="padding-top: 30px;">
         <img :src="compareUser[0].avatar" />
-        <h4>{{compareUser[0].username}}</h4>
+        <h4>{{compareUser[0].Name}}</h4>
         <hr />
         <h6 v-if="compareUser[0].name != null">{{compareUser[0].name}}</h6>
         <h6 v-if="compareUser[0].company != null">{{compareUser[0].company}}</h6>
@@ -91,7 +91,7 @@
       </div>
       <div class="col-md-2 profile-sidebar" style="padding-top: 30px;">
         <img :src="compareUser[1].avatar" />
-        <h4>{{compareUser[1].username}}</h4>
+        <h4>{{compareUser[1].Name}}</h4>
         <hr />
         <h6 v-if="compareUser[1].name != null">{{compareUser[1].name}}</h6>
         <h6 v-if="compareUser[1].company != null">{{compareUser[1].company}}</h6>

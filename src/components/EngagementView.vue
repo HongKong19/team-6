@@ -3,10 +3,10 @@
     <h2>{{title}}</h2>
     <hr />
     <div class="list-group list-group-flush">
-      <div class="fav-user row boxing" v-for="user in favorites" :key="user.id">
+      <div class="fav-user row boxing" v-for="user in EmailList" :key="user.id">
         <div>
-          <h4>{{user.username}}</h4>
-          <h4 class="subtitle">Total Donation Made: {{user.overall_score}}</h4>
+          <h4>{{user.Name}}</h4>
+          <h4 class="subtitle">Total Donation Made: {{user.Score}}</h4>
           <hr />
         </div>
         <div>
@@ -36,6 +36,7 @@ export default {
     }
   },
   computed: mapState({
+    EmailList: "EmailList",
     favorites: "favorites",
     menu: "menu"
   })
