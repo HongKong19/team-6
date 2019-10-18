@@ -8,13 +8,21 @@ from flask_cors import CORS
 app = Flask(__name__)
 cors = CORS(app)
 
-g = Github(GITHUB_API_KEY)
+import json
+
+with open('./user_base.json') as json_file:
+    data = json.load(json_file)
 
 
-@app.route('/')
+
+@app.route('/getUser')
 def index():
     user = request.args.get('user')
-    return json.dumps(get(user))
+    try:
+        return json.dumps(data[user])
+    except:
+        return('ERROR: INVALID')
+
 
 
 @lru_cache(maxsize=100)
