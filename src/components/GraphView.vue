@@ -1,10 +1,26 @@
 <template>
   <v-container>
       <div class="graph-page">
-        <d3-network :net-nodes="nodes" :net-links="links" :options="options"></d3-network>
+        <div v-if="network1">
+          <d3-network :net-nodes="nodes1" :net-links="links" :options="options"></d3-network>
+        </div>
+        <div v-if="network2">
+          <d3-network :net-nodes="nodes2" :net-links="links" :options="options"></d3-network>
+        </div>
+        <div v-if="network3">
+          <d3-network :net-nodes="nodes3" :net-links="links" :options="options"></d3-network>
+        </div>
       </div>
-      <div class="filter-box">
-      </div>
+
+      <button class="btn btn-main " v-on:click="network1">
+          View Profile
+      </button>
+      <button class="btn btn-main " v-on:click="network2">
+          View Profile
+      </button>
+      <button class="btn btn-main " v-on:click="network3">
+        View Profile
+      </button>
   </v-container>
 </template>
 
@@ -13,10 +29,32 @@ import D3Network from 'vue-d3-network'
 export default {
   data () {
     return {
-      nodes: [
-        { id: 1, name: 'Name1' },
-        { id: 2, name: 'Name2' },
-        { id: 3, _color: 'orange'},
+      nodes1: [
+        { id: 1, name: 'John S' },
+        { id: 2, name: 'Jack H' },
+        { id: 3, name: 'Tim H', _color: 'orange'},
+        { id: 4 },
+        { id: 5 },
+        { id: 6 },
+        { id: 7 },
+        { id: 8 },
+        { id: 9 }
+      ],
+            nodes2: [
+        { id: 1, name: 'John S' },
+        { id: 2, name: 'Jack H' },
+        { id: 3, name: 'Tim H', _color: 'orange'},
+        { id: 4 },
+        { id: 5 },
+        { id: 6 },
+        { id: 7 },
+        { id: 8 },
+        { id: 9 }
+      ],
+            nodes3: [
+        { id: 1, name: 'John S' },
+        { id: 2, name: 'Jack H' },
+        { id: 3, name: 'Tim H', _color: 'orange'},
         { id: 4 },
         { id: 5 },
         { id: 6 },
@@ -36,9 +74,6 @@ export default {
         { sid: 7, tid: 9 },
         { sid: 9, tid: 5 },
         { sid: 6, tid: 4 },
-
-        
-
       ],
       options:
       {
@@ -46,7 +81,28 @@ export default {
         nodeSize: 20,
         nodeLabels: true,
         linkWidth:5
-      }
+      },
+      
+      network1: true,
+      network2: false,
+      network3: false
+    }
+  },
+  methods: {
+    network1: function() {
+      network1= true,
+      network2= false,
+      network3= false
+    },
+    network2: function() {
+      network1= false,
+      network2= true,
+      network3= false
+    },
+    network3: function() {
+      network1= false,
+      network2= false,
+      network3= true
     }
   },
 components: {
