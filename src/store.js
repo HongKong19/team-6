@@ -49,6 +49,7 @@ export const store = new Vuex.Store({
     actions: {
         searchUser({ commit }, id) {
             id = id.replace(" ", "%20");
+            console.log(id);
             let query = "http://localhost:5000/?user=" + id
             Axios.get(query)
                 .then((response) => {
@@ -65,6 +66,7 @@ export const store = new Vuex.Store({
             console.log(users[0], users[1])
             users[0] = users[0].replace(" ", "%20");
             users[1] = users[1].replace(" ", "%20");
+            console.log(users[0], users[1])
             let query = "http://localhost:5000/compare?userA=" + users[0] + "&userB=" + users[1 ]
             console.log("Reached");
             Axios.get(query)
