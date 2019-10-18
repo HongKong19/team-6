@@ -1,5 +1,11 @@
 <template>
-    <h1>{{ title }}</h1>
+    <div class="engagement-box">
+        <div class="engagement-person">
+            <h5>Faisal</h5>
+            <button>Email</button>
+        </div>
+        <hr>
+    </div>
 </template>
 
 <script>

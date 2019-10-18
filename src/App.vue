@@ -48,7 +48,7 @@
               v-bind:class="{'selected': (menu == 'Engagement')}"
               v-on:click="this.engagement"
             >
-              <font-awesome-icon icon="balance-scale" />
+              <font-awesome-icon icon="dollar-sign" />
             </a>
 
           </div>
