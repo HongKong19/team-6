@@ -53,6 +53,7 @@ export const store = new Vuex.Store({
                 .then((response) => {
                     console.log(response.data)
                     if (response.message != "Not Found") {
+                        console.log(response.data)
                         commit('setViewingUser', response.data)
                     }
                     commit('setLoading', false)
