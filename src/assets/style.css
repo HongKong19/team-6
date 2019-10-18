@@ -1,5 +1,5 @@
 body {
-    height: 100vh
+    height: 100vh;
 }
 
 p {
@@ -40,7 +40,7 @@ div, a, button {
 }
 
 .main-sidebar {
-    background-color: #efefef;
+    background-color: #5db8c6;
 }
 
 .main-sidebar .list-group-item {
@@ -324,4 +324,14 @@ button:disabled:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+.boxing{
+    display: flex;
+    position: relative;
+}
+
+.box-img{
+    position: absolute;
+    right: 10px;
 }

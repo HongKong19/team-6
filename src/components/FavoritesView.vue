@@ -3,26 +3,15 @@
     <h2>{{title}}</h2>
     <hr />
     <div class="list-group list-group-flush">
-      <div class="fav-user row" v-for="user in favorites" :key="user.id">
-        <div class="col-md-3">
-          <div class="pfp">
-            <img :src="user.avatar" />
-          </div>
-        </div>
-        <div class="col-md-6">
+      <div class="fav-user row boxing" v-for="user in favorites" :key="user.id">
+        <div>
           <h4>{{user.username}}</h4>
-          <h4 class="subtitle">Developer Score: {{user.overall_score}}</h4>
+          <h4 class="subtitle">Total Donation Made: {{user.overall_score}}</h4>
           <hr />
-          <h6>{{user.name}}</h6>
-          <h6>{{user.company}}</h6>
-          <h6>{{user.location}}</h6>
         </div>
-        <div class="col-md-3">
-          <button style="margin-right: 10px" class="btn btn-main" v-on:click="viewUser(user)">
-            <font-awesome-icon icon="newspaper" /> Report
-          </button>
-          <button class="btn btn-delete" v-on:click="del(user.username)">
-            <font-awesome-icon icon="times" />
+        <div>
+          <button class="btn btn-main box-img" v-on:click="viewUser(user)">
+            <font-awesome-icon icon="newspaper" /> Email
           </button>
         </div>
       </div>
