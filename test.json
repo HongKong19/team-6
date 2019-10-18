@@ -1,0 +1,72 @@
+{
+    "name": "Adrian",
+    "username": "garlicsauce",
+    "avatar": "https://avatars0.githubusercontent.com/u/10085330?v=4(25 kB)",
+    "bio": "24 years old java and angular developer.",
+    "email": "adrian.michalik@wp.pl",
+    "location": "Warsaw",
+    "company": "@HLTech",
+    "num_of_java_repos": 2,
+    "avg_stars_count_per_repo": 0.5,
+    "closed_issue_ratio": 0.9565217391304348,
+    "avg_fork_count": 0.0,
+    "has_maven_gradle": true,
+    "has_readme": true,
+    "uses_branches": true,
+    "top_dependencies": [
+        [
+            "junit",
+            2
+        ],
+        [
+            "judge-d-contract-publisher-core",
+            1
+        ],
+        [
+            "maven-plugin-testing-harness",
+            1
+        ],
+        [
+            "maven-plugin-annotations",
+            1
+        ],
+        [
+            "maven-compiler-plugin",
+            1
+        ],
+        [
+            "maven-gpg-plugin",
+            1
+        ],
+        [
+            "maven-javadoc-plugin",
+            1
+        ],
+        [
+            "maven-plugin-plugin",
+            1
+        ],
+        [
+            "maven-source-plugin",
+            1
+        ],
+        [
+            "maven-surefire-plugin",
+            1
+        ]
+    ],
+    "overall_score": 61,
+    "scores": {
+        "versatility": 40,
+        "best_practices": 100,
+        "github_activity": 43,
+        "community_score": 21
+    },
+    "community_scores": {
+        "comments_quality_score": 0,
+        "pr_quality_score": 43
+    },
+    "avg_response_time": 0.0,
+    "code_additions": 336,
+    "code_deletions": 206
+}

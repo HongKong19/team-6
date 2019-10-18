@@ -1,0 +1,277 @@
+body {
+    height: 100vh
+}
+
+p {
+    word-break: break-all;
+}
+
+div, a, button {
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+}
+
+.body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.main {
+    height: 100%
+}
+
+.title-bar {
+    padding: 10px 20px;
+    background: #4eaba8;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.container {
+    background: #ffffff
+}
+
+.main-sidebar {
+    background-color: #efefef;
+}
+
+.main-sidebar .list-group-item {
+    background-color: transparent;
+    border: none;
+    border-left: 5px solid transparent;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+}
+
+.main-sidebar .list-group-item:hover {
+    border-color: #4eaba8;
+}
+
+.main-sidebar .selected {
+    color: #4eaba8;
+    background-color:white
+}
+
+.page-content {
+    margin: 30px auto;
+    padding: 30px;
+}
+
+.svg-inline--fa {
+    padding-right: 3px;
+    margin-right: 3px;
+}
+
+.btn {
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.btn:hover {
+    opacity: 0.8;
+    color: white;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+}
+
+button:disabled:hover {
+    opacity: 0.65;
+}
+
+.btn-main {
+    background-color: #4eaba8;
+    color: white;
+}
+
+.btn-delete  {
+    background-color: #ba1e38;
+    color: white;
+}
+
+.btn-delete .svg-inline--fa {
+    padding: 0;
+    margin: 0;
+}
+
+.btn-sec {
+    background-color: #ddd;
+}
+
+.btn-sec:hover {
+    color: #333
+}
+
+.btn-sec-small {
+    background-color: #ddd;
+    text-transform: none;
+    letter-spacing: 0px;
+    color: #333;
+    border: none;
+}
+
+.btn-sec-small:hover {
+    color: #333
+}
+
+.subtitle {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
+    color: #4eaba8;
+}
+
+.fav-user {
+    padding: 20px;
+}
+
+.pfp img {
+    max-width: 100%;
+    height: auto;
+}
+
+.user-page-search {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.search-page {
+    margin-top: -15%;
+}
+
+.user-page-view {
+    flex: 2;
+    display: flex;
+}
+
+.search-textbox {
+    min-width: 500px;
+}
+
+.profile-sidebar {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 10px 15px;
+}
+
+.profile-sidebar img {
+    max-width: 70%;
+    margin-bottom: 30px;
+}
+
+.profile-main {
+    background-color: #efefef;
+}
+
+.clear-search {
+    font-size: 30px;
+    font-weight: lighter;
+    align-self: flex-end;
+    color: #444;
+    margin-top: -4px;
+}
+
+.compare-page {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.compare-content {
+    margin-top: -15%;
+}
+
+.compare-icon {
+    transform: rotate(90deg);
+    opacity: 0.3;
+    font-size: 30px;
+    margin: 15px 0;
+}
+
+.comparison-main {
+    background-color: #efefef;
+    height:100%;
+}
+
+.title-bar .svg-inline--fa {
+    font-size: 20px;
+    margin-top: 2px;
+    padding-right: 10px;
+}
+
+.score-card {
+    background: white;
+    margin: 30px;
+    padding: 30px;
+    max-width: 40%;
+    width: 40%;
+    line-height: 30px;
+    display: inline-block;
+    text-align: left;
+
+}
+
+.score-card .svg-inline--fa {
+    margin-top: 2px;
+    margin-right: 5px;
+    color: #4eaba8;
+    margin-left: 15px;
+    font-size: 20pt;
+}
+
+.score-card-main {
+    max-width: 80%;
+    width: 80%;
+}
+
+.score-card-main .radial-progress-container {
+    margin: 0 auto;
+}
+
+.score-card-main h1, .score-card-main h3, .score-card-third h3, .score-card-two-thirds h3, .score-card-third h6, .score-card-two-thirds h6 {
+    text-align: center;
+}
+
+.score-card-third {
+    width: 25%;
+    max-width: 25%;
+    text-align: center;
+}
+
+.score-card-two-thirds {
+    width: 55%;
+    max-width: 55%;
+    text-align:center;
+}
+
+.score-name {
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+}
+
+.data-holder {
+    text-align: center;
+}
+
+.br {
+    border-right: 1px solid #efefef;
+}
